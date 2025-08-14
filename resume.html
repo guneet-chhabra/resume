@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guneet Chhabra - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e6f0ff, #ffffff);
+            color: #003366;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #007acc;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+
+        header h1 {
+            margin: 15px 0 5px;
+            font-size: 2.2em;
+        }
+
+        header p {
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007acc;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .info, .skills, .interests {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 8px 0;
+            font-size: 1.05em;
+        }
+
+        .skill-bar {
+            background: #cce6ff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+
+        .skill {
+            height: 8px;
+            background: #007acc;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Lenovo\Desktop\resume.jpg" alt="Profile Photo">
+        <h1>Guneet Chhabra</h1>
+        <p>Web Developer | Programmer | Tech Enthusiast</p>
+    </header>
+
+    <section>
+        <div class="info">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Email:</strong> iguneetchhabra@gmail.com</li>
+                <li><strong>Phone:</strong> +91 9871476341</li>
+                <li><strong>Location:</strong> Gurugram, Haryana</li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML <div class="skill-bar"><div class="skill" data-skill="90"></div></div></li>
+                <li>CSS <div class="skill-bar"><div class="skill" data-skill="70"></div></div></li>
+                <li>JavaScript <div class="skill-bar"><div class="skill" data-skill="40"></div></div></li>
+                <li>Python <div class="skill-bar"><div class="skill" data-skill="80"></div></div></li>
+                <li>C++ <div class="skill-bar"><div class="skill" data-skill="75"></div></div></li>
+                <li>C <div class="skill-bar"><div class="skill" data-skill="60"></div></div></li>
+                <li>Java <div class="skill-bar"><div class="skill" data-skill="65"></div></div></li>
+            </ul>
+        </div>
+
+        <div class="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>⚽ Football</li>
+                <li>🎨 Graphic Design</li>
+                <li>🎮 Game Development</li>
+                <li>📚 Reading</li>
+                <li>♟ Chess</li>
+                <li>🥊 Boxing</li>
+                <li>🎬 Video Editing</li>
+                <li>🎾 Tennis</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Guneet Chhabra — All Rights Reserved
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.skill').forEach(skill => {
+                const skillTop = skill.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (skillTop < windowHeight - 50) {
+                    skill.style.width = skill.getAttribute('data-skill') + '%';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
